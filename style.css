@@ -50,17 +50,17 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 20px; /* Adjusting the space between the image and the text content */
 }
 
 .card-text-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 16px; /* Adding space between the text elements inside the card */
 }
 
 .description-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: hsl(0, 0%, 42%);
 }
 
@@ -88,37 +88,28 @@ body {
   z-index: -1;
 }
 
-.circle-background .circle {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.circle-background .circle::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.circle {
   background-color: #ffd8d8;
   border-radius: 50%;
-  top: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .circle-background.bottom {
-  top: auto;
-  bottom: -0.8vh;
-  left: 70vw;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   width: 150px;
   height: 50px;
+  top: auto;
+  bottom: -0.8vh;
+  left: 70vw;
 }
 
-.circle-background.bottom .circle::before {
+.circle-background.bottom .circle {
   background-color: #77bece;
+  border-radius: 50%;
   width: 20px;
   height: 20px;
 }
