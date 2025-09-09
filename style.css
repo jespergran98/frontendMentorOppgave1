@@ -50,17 +50,17 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Adjusting the space between the image and the text content */
+  gap: 20px;
 }
 
 .card-text-content {
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Adding space between the text elements inside the card */
+  gap: 16px;
 }
 
 .description-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: hsl(0, 0%, 42%);
 }
 
@@ -80,36 +80,45 @@ body {
   top: -0.5vh;
   left: 20vw;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
-  grid-template-rows: repeat(6, 1fr); /* Creates 6 equal-height rows */
-  gap: 10px; /* Adjusts the space between the circles */
-  width: 90px; /* Sets a fixed width for the grid container */
-  height: 180px; /* Sets a fixed height for the grid container */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+  width: 90px;
+  height: 180px;
   z-index: -1;
 }
 
-.circle {
+.circle-background .circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.circle-background .circle::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-color: #ffd8d8;
   border-radius: 50%;
-  width: 100%; /* Makes the circle fill its grid cell */
-  height: 100%; /* Makes the circle fill its grid cell */
+  top: 0;
+  left: 0;
 }
 
 .circle-background.bottom {
+  top: auto;
+  bottom: -0.8vh;
+  left: 70vw;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   width: 150px;
   height: 50px;
-  top: auto;
-  bottom: -0.8vh;
-  left: 70vw;
 }
 
-.circle-background.bottom .circle {
+.circle-background.bottom .circle::before {
   background-color: #77bece;
-  border-radius: 50%;
   width: 20px;
   height: 20px;
 }
@@ -117,7 +126,7 @@ body {
 .zigzag {
   position: absolute;
   top: 20vh;
-  right: -1.5vw;
+  right: -1.1vw;
   width: 220px;
   height: 70px;
   z-index: -1;
