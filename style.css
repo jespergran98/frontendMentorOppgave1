@@ -81,8 +81,8 @@ body {
   grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
   grid-template-rows: repeat(6, 1fr); /* Creates 6 equal-height rows */
   gap: 10px; /* Adjusts the space between the circles */
-  width: 85px; /* Sets a fixed width for the grid container */
-  height: 170px; /* Sets a fixed height for the grid container */
+  width: 90px; /* Sets a fixed width for the grid container */
+  height: 180px; /* Sets a fixed height for the grid container */
   z-index: -1;
 }
 
@@ -110,4 +110,13 @@ body {
   border-radius: 50%;
   width: 20px;
   height: 20px;
+}
+
+.zigzag {
+  position: absolute;
+  top: 20vh;
+  right: -1.5vw;
+  width: 220px;
+  height: 70px;
+  z-index: -1;
 }
