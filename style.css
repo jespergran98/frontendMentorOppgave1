@@ -72,3 +72,42 @@ body {
   width: 32px;
   height: auto;
 }
+
+.circle-background {
+  position: absolute;
+  top: -0.5vh;
+  left: 20vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+  grid-template-rows: repeat(6, 1fr); /* Creates 6 equal-height rows */
+  gap: 10px; /* Adjusts the space between the circles */
+  width: 85px; /* Sets a fixed width for the grid container */
+  height: 170px; /* Sets a fixed height for the grid container */
+  z-index: -1;
+}
+
+.circle {
+  background-color: #f6c7c7;
+  border-radius: 50%;
+  width: 100%; /* Makes the circle fill its grid cell */
+  height: 100%; /* Makes the circle fill its grid cell */
+}
+
+.circle-background.bottom {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 150px;
+  height: 50px;
+  top: auto;
+  bottom: -0.8vh;
+  left: 70vw;
+}
+
+.circle-background.bottom .circle {
+  background-color: #77bece;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
