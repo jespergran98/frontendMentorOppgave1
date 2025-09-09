@@ -30,7 +30,7 @@ body {
 .card-container {
   background-color: #ffffff;
   border-radius: 16px;
-  border: 1px solid hsl(0, 0%, 7%);
+  border: 2px solid hsl(0, 0%, 7%);
   padding: 20px;
   max-width: 380px;
   margin: 20px;
@@ -87,7 +87,7 @@ body {
 }
 
 .circle {
-  background-color: #f6c7c7;
+  background-color: #ffd8d8;
   border-radius: 50%;
   width: 100%; /* Makes the circle fill its grid cell */
   height: 100%; /* Makes the circle fill its grid cell */
@@ -119,4 +119,26 @@ body {
   width: 220px;
   height: 70px;
   z-index: -1;
+}
+
+.line {
+  position: absolute;
+  background-color: #77bece;
+  height: 12px;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.line-1 {
+  width: 180px;
+  bottom: -0.8vh;
+  left: 7vw;
+  transform: rotate(120deg);
+}
+
+.line-2 {
+  width: 120px;
+  bottom: -0.1vh;
+  left: 4vw;
+  transform: rotate(160deg);
 }
